@@ -1,8 +1,8 @@
 from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView,RedirectView
+from django.views.generic import TemplateView, RedirectView
 from django.contrib import admin
 
-from wbc.process.views import PublicationFeed
+from wbc.process.views import PublicationFeed, createParticipation
 
 admin.autodiscover()
 
@@ -17,6 +17,7 @@ urlpatterns = patterns('',
 
     # veroeffentlichungen neu
     url(r'^veroeffentlichungen/neu/$', 'wbc.process.views.create_publication'),
+    url(r'^veroeffentlichungen/(?P<pk>\d+)/$', createParticipation.as_view()),
 
     # feeds
     url(r'^feeds/$', 'wbc.core.views.feeds'),

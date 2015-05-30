@@ -21,7 +21,8 @@ INSTALLED_APPS = (
     'wbc.region',
     'wbc.process',
     'wbc.news',
-    'wbc.comments'
+    'wbc.comments',
+    'participation',
 )
 
 MIDDLEWARE_CLASSES = (
