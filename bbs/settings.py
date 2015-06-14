@@ -22,6 +22,7 @@ INSTALLED_APPS = (
     'wbc.process',
     'wbc.news',
     'wbc.comments',
+    # local apps
     'participation',
 )
 

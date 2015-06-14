@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from models import BplanEinwendung
+from models import BebauungsplanParticipation
 
-admin.site.register(BplanEinwendung)
+admin.site.register(BebauungsplanParticipation)

@@ -3,7 +3,7 @@ from django.db import models
 from wbc.process.models import Participation
 
 
-class BplanEinwendung(Participation):
+class BebauungsplanParticipation(Participation):
     statement = models.TextField(verbose_name="Stellungnahme", help_text="Meine Stellungnahme/Kommentare")
     name = models.CharField(max_length=256, verbose_name="Name", help_text="Mein Name")
     address = models.CharField(max_length=256, verbose_name="Adresse", help_text="Meine Adresse")
@@ -14,5 +14,5 @@ class BplanEinwendung(Participation):
         return self.__class__.__name__
 
     class Meta:
-        verbose_name = "Einwendung BPlan-Verfahren"
+        verbose_name = "Einwendung Bebauungsplanverfahren"
 

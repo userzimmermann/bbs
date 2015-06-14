@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.forms import ModelForm
 
-from models import BplanEinwendung
+from models import BebauungsplanParticipation
 
 
-class BplanEinwendungForm(ModelForm):
+class BebauungsplanParticipationForm(ModelForm):
     class Meta:
         model = BplanEinwendung
         fields = '__all__'
