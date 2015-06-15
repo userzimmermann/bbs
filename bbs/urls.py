@@ -2,7 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView, RedirectView
 from django.contrib import admin
 
-from wbc.process.views import PlaceCreate,PlaceUpdate,PlaceDelete,PublicationCreate,PublicationUpdate,PublicationDelete,PublicationFeed
+from wbc.process.views import PlaceCreate,PlaceUpdate,PlaceDelete,PublicationCreate,PublicationUpdate,PublicationDelete,ParticipationCreate,PublicationFeed
 
 admin.autodiscover()
 
@@ -18,10 +18,13 @@ urlpatterns = patterns('',
     url(r'^orte/(?P<pk>[0-9]+)/bearbeiten/$', PlaceUpdate.as_view(), name='place_update'),
     url(r'^orte/(?P<pk>[0-9]+)/entfernen/$', PlaceDelete.as_view(), name='place_delete'),
 
-    # veroeffentlichungen neu
+    # veroeffentlichungen
     url(r'^veroeffentlichungen/neu/$', PublicationCreate.as_view(), name='publication_create'),
     url(r'^veroeffentlichungen/(?P<pk>[0-9]+)/bearbeiten/$', PublicationUpdate.as_view(), name='publication_update'),
     url(r'^veroeffentlichungen/(?P<pk>[0-9]+)/entfernen/$', PublicationDelete.as_view(), name='publication_delete'),
+
+    # beteiligung
+    url(r'^beteiligung/neu/$', ParticipationCreate.as_view(), name='participation_create'),
 
     # feeds
     url(r'^feeds/$', 'wbc.core.views.feeds'),
