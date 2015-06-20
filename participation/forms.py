@@ -6,5 +6,5 @@ from models import BebauungsplanParticipation
 
 class BebauungsplanParticipationForm(ModelForm):
     class Meta:
-        model = BplanEinwendung
+        model = BebauungsplanParticipation
         fields = '__all__'

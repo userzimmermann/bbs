@@ -15,4 +15,5 @@ class BebauungsplanParticipation(Participation):
 
     class Meta:
         verbose_name = "Einwendung Bebauungsplanverfahren"
+        verbose_name_plural = "Einwendungen Bebauungsplanverfahren"
 

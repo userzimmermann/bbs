@@ -98,3 +98,7 @@ DEFAULT_VIEW = {
     'lon': 13.37628,
     'zoom': 11
 }
+
+PARTICIPATION_MODELS = [
+    ('BebauungsplanParticipation','Einwendung Bebauungsplanverfahren'),
+]
